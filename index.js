@@ -1,3 +1,3 @@
 module.exports = function() {
-  return 'npm-package-template';
+  return 'inline-style-parser';
 };

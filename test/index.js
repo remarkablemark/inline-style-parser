@@ -1,8 +1,8 @@
 const assert = require('assert');
 const main = require('..');
 
-describe('npm-package-template', () => {
+describe('inline-style-parser', () => {
   it('returns with placeholder', () => {
-    assert.equal(main(), 'npm-package-template');
+    assert.equal(main(), 'inline-style-parser');
   });
 });

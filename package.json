@@ -1,7 +1,7 @@
 {
-  "name": "npm-package-template",
+  "name": "inline-style-parser",
   "version": "0.0.0",
-  "description": "An npm package template.",
+  "description": "An inline style parser.",
   "main": "index.js",
   "scripts": {
     "coveralls": "cat coverage/lcov.info | coveralls",
@@ -14,13 +14,17 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/remarkablemark/npm-package-template"
+    "url": "https://github.com/remarkablemark/inline-style-parser"
   },
   "bugs": {
-    "url": "https://github.com/remarkablemark/npm-package-template/issues"
+    "url": "https://github.com/remarkablemark/inline-style-parser/issues"
   },
   "keywords": [
-    "npm-package-template"
+    "inline-style-parser",
+    "inline-style",
+    "style",
+    "parser",
+    "css"
   ],
   "dependencies": {},
   "devDependencies": {
