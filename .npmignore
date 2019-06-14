@@ -1,0 +1,6 @@
+.commitlint*
+.eslint*
+.npm*
+.travis*
+coverage
+test
