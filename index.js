@@ -2,20 +2,25 @@
 // https://github.com/visionmedia/css-parse/pull/49#issuecomment-30088027
 var commentre = /\/\*[^*]*\*+([^/*][^*]*\*+)*\//g;
 
+/**
+ * @param {String} css
+ * @param {Object} [options]
+ * @return {Object[]}
+ */
 module.exports = function(css, options) {
   options = options || {};
 
   /**
    * Positional.
    */
-
   var lineno = 1;
   var column = 1;
 
   /**
    * Update lineno and column based on `str`.
+   *
+   * @param {String} str
    */
-
   function updatePosition(str) {
     var lines = str.match(/\n/g);
     if (lines) lineno += lines.length;
@@ -25,8 +30,9 @@ module.exports = function(css, options) {
 
   /**
    * Mark position and patch `node.position`.
+   *
+   * @return {Function}
    */
-
   function position() {
     var start = { line: lineno, column: column };
     return function(node) {
@@ -37,9 +43,13 @@ module.exports = function(css, options) {
   }
 
   /**
-   * Store position information for a node
+   * Store position information for a node.
+   *
+   * @constructor
+   * @property {Object} start
+   * @property {Object} end
+   * @property {undefined|String} source
    */
-
   function Position(start) {
     this.start = start;
     this.end = { line: lineno, column: column };
@@ -47,17 +57,18 @@ module.exports = function(css, options) {
   }
 
   /**
-   * Non-enumerable source string
+   * Non-enumerable source string.
    */
-
   Position.prototype.content = css;
-
-  /**
-   * Error `msg`.
-   */
 
   var errorsList = [];
 
+  /**
+   * Error `msg`.
+   *
+   * @param {String} msg
+   * @throws {Error}
+   */
   function error(msg) {
     var err = new Error(
       options.source + ':' + lineno + ':' + column + ': ' + msg
@@ -77,8 +88,10 @@ module.exports = function(css, options) {
 
   /**
    * Match `re` and return captures.
+   *
+   * @param {RegExp} re
+   * @return {undefined|Array}
    */
-
   function match(re) {
     var m = re.exec(css);
     if (!m) return;
@@ -91,15 +104,16 @@ module.exports = function(css, options) {
   /**
    * Parse whitespace.
    */
-
   function whitespace() {
     match(/^\s*/);
   }
 
   /**
-   * Parse comments;
+   * Parse comments.
+   *
+   * @param {Object[]} [rules]
+   * @return {Object[]}
    */
-
   function comments(rules) {
     var c;
     rules = rules || [];
@@ -113,8 +127,9 @@ module.exports = function(css, options) {
 
   /**
    * Parse comment.
+   *
+   * @return {Object}
    */
-
   function comment() {
     var pos = position();
     if ('/' != css.charAt(0) || '*' != css.charAt(1)) return;
@@ -145,8 +160,9 @@ module.exports = function(css, options) {
 
   /**
    * Parse declaration.
+   *
+   * @return {Object}
    */
-
   function declaration() {
     var pos = position();
 
@@ -175,12 +191,12 @@ module.exports = function(css, options) {
 
   /**
    * Parse declarations.
+   *
+   * @return {Object[]}
    */
-
   function declarations() {
     var decls = [];
 
-    if (!open()) return error("missing '{'");
     comments(decls);
 
     // declarations
@@ -192,7 +208,6 @@ module.exports = function(css, options) {
       }
     }
 
-    if (!close()) return error("missing '}'");
     return decls;
   }
 
@@ -202,8 +217,10 @@ module.exports = function(css, options) {
 
 /**
  * Trim `str`.
+ *
+ * @param {String} str
+ * @return {String}
  */
-
 function trim(str) {
   return str ? str.replace(/^\s+|\s+$/g, '') : '';
 }
