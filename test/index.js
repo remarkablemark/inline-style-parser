@@ -1,8 +1,8 @@
 const assert = require('assert');
-const main = require('..');
+const parse = require('..');
 
-describe('inline-style-parser', () => {
+describe.skip('inline-style-parser', () => {
   it('returns with placeholder', () => {
-    assert.equal(main(), 'inline-style-parser');
+    assert.equal(parse(), 'inline-style-parser');
   });
 });
