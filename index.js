@@ -222,7 +222,7 @@ module.exports = function(css, options) {
     var pos = position();
 
     // prop
-    var prop = match(/^(\*?[-#\/\*\\\w]+(\[[0-9a-z_-]+\])?)\s*/);
+    var prop = match(/^(\*?[-#/*\\\w]+(\[[0-9a-z_-]+\])?)\s*/);
     if (!prop) return;
     prop = trim(prop[0]);
 
@@ -230,7 +230,7 @@ module.exports = function(css, options) {
     if (!match(/^:\s*/)) return error("property missing ':'");
 
     // val
-    var val = match(/^((?:'(?:\\'|.)*?'|"(?:\\"|.)*?"|\([^\)]*?\)|[^};])+)/);
+    var val = match(/^((?:'(?:\\'|.)*?'|"(?:\\"|.)*?"|\([^)]*?\)|[^};])+)/);
 
     var ret = pos({
       type: 'declaration',
@@ -302,7 +302,7 @@ module.exports = function(css, options) {
     var vendor = m[1];
 
     // identifier
-    var m = match(/^([-\w]+)\s*/);
+    m = match(/^([-\w]+)\s*/);
     if (!m) return error('@keyframes missing name');
     var name = m[1];
 
