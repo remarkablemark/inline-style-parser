@@ -1,6 +1,5 @@
-const assert = require('assert');
 const css = require('css');
-const parse = require('..');
+const inlineStyleParser = require('..');
 const { cases } = require('./data');
 
 /**
@@ -26,11 +25,8 @@ function removePosition(declarations) {
   }));
 }
 
-cases.forEach(inlineStyle => {
-  it(`parses \`${inlineStyle}\``, () => {
-    assert.deepEqual(
-      removePosition(parse(inlineStyle)),
-      removePosition(getDeclarations(inlineStyle))
-    );
-  });
+it.each(cases)('parses `%s`', style => {
+  expect(removePosition(inlineStyleParser(style))).toEqual(
+    removePosition(getDeclarations(style))
+  );
 });
