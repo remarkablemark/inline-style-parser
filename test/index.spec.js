@@ -1,6 +1,6 @@
 const css = require('css');
 const inlineStyleParser = require('..');
-const { cases } = require('./data');
+const { cases, snapshots } = require('./data');
 
 /**
  * @param {string} inlineStyle
@@ -25,8 +25,12 @@ function removePosition(declarations) {
   }));
 }
 
-it.each(cases)('parses `%s`', style => {
+it.each(cases)('parses "%s"', style => {
   expect(removePosition(inlineStyleParser(style))).toEqual(
     removePosition(getDeclarations(style))
   );
+});
+
+it.each(snapshots)('%s', (_name, style) => {
+  expect(inlineStyleParser(style)).toMatchSnapshot();
 });

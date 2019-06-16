@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`parses correctly when comment precedes colon 1`] = `
+Array [
+  Object {
+    "position": Position {
+      "end": Object {
+        "column": 40,
+        "line": 1,
+      },
+      "source": undefined,
+      "start": Object {
+        "column": 1,
+        "line": 1,
+      },
+    },
+    "property": "text-align",
+    "type": "declaration",
+    "value": "center",
+  },
+]
+`;

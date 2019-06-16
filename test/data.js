@@ -36,14 +36,23 @@ const cases = [
   // comment
   '/* comment */',
   'top: 0; /* comment */ bottom: 42rem;',
-  ` top: 0; /* comment */
-  /* comment */   bottom: 42rem; `,
+  ` right: 0; /* comment */
+  /* comment */   left: 42rem; `,
 
   // custom
   'foo: bar;',
   'foo:bar; baz:qux'
 ];
 
+const snapshots = [
+  // `css.parse` throws an error when a comment precedes the colon (bug)
+  [
+    'parses correctly when comment precedes colon',
+    'text-align/**/ /*:*/ : /*:*//**/ center'
+  ]
+];
+
 module.exports = {
-  cases
+  cases,
+  snapshots
 };
