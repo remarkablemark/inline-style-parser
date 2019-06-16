@@ -8,8 +8,9 @@
     "lint": "eslint --ignore-path .gitignore .",
     "lint:fix": "npm run lint -- --fix",
     "release": "standard-version --no-verify",
-    "test": "mocha",
-    "test:coverage": "nyc npm test",
+    "test": "jest",
+    "test:ci": "npm run test:coverage -- --ci",
+    "test:coverage": "npm test -- --coverage",
     "test:watch": "npm test -- --watch"
   },
   "repository": {
@@ -34,9 +35,8 @@
     "eslint": "^5.16.0",
     "eslint-plugin-prettier": "^3.1.0",
     "husky": "^2.4.1",
+    "jest": "^24.8.0",
     "lint-staged": "^8.2.1",
-    "mocha": "^6.1.4",
-    "nyc": "^14.1.1",
     "prettier": "^1.18.2",
     "standard-version": "^6.0.1"
   },
