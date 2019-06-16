@@ -1,27 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`parses correctly when comment precedes colon 1`] = `
-Array [
-  Object {
-    "position": Position {
-      "end": Object {
-        "column": 40,
-        "line": 1,
-      },
-      "source": undefined,
-      "start": Object {
-        "column": 1,
-        "line": 1,
-      },
-    },
-    "property": "text-align",
-    "type": "declaration",
-    "value": "center",
-  },
-]
-`;
-
-exports[`parses multiple declarations correctly 1`] = `
+exports[`inline-style-parser correctly parses multiple declarations 1`] = `
 Array [
   Object {
     "position": Position {
@@ -105,7 +84,7 @@ Array [
 ]
 `;
 
-exports[`parses single declaration correctly 1`] = `
+exports[`inline-style-parser correctly parses single declaration 1`] = `
 Array [
   Object {
     "position": Position {
@@ -122,6 +101,27 @@ Array [
     "property": "background-color",
     "type": "declaration",
     "value": "#C0FFEE",
+  },
+]
+`;
+
+exports[`inline-style-parser correctly parses when comment precedes colon 1`] = `
+Array [
+  Object {
+    "position": Position {
+      "end": Object {
+        "column": 40,
+        "line": 1,
+      },
+      "source": undefined,
+      "start": Object {
+        "column": 1,
+        "line": 1,
+      },
+    },
+    "property": "text-align",
+    "type": "declaration",
+    "value": "center",
   },
 ]
 `;

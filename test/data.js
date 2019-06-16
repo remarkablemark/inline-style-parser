@@ -52,14 +52,14 @@ const cases = [
 const snapshots = [
   // `css.parse` throws an error when a comment precedes the colon (bug)
   [
-    'parses correctly when comment precedes colon',
+    'correctly parses when comment precedes colon',
     'text-align/**/ /*:*/ : /*:*//**/ center'
   ],
 
-  ['parses single declaration correctly', 'background-color: #C0FFEE;'],
+  ['correctly parses single declaration', 'background-color: #C0FFEE;'],
 
   [
-    'parses multiple declarations correctly',
+    'correctly parses multiple declarations',
     `
       background: -webkit-gradient(linear, left top, left bottom, from(white), to(black));
       content  :  " "  ; /* comment */

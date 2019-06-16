@@ -25,27 +25,35 @@ function removePosition(declarations) {
   }));
 }
 
-// compare with `css.parse` declarations
-it.each(cases)('parses "%s"', style => {
-  expect(removePosition(inlineStyleParser(style))).toEqual(
-    removePosition(getDeclarations(style))
-  );
+// compare output with `css.parse` declarations
+describe('when compared to `css.parse`', () => {
+  it.each(cases)('correctly parses "%s"', style => {
+    expect(removePosition(inlineStyleParser(style))).toEqual(
+      removePosition(getDeclarations(style))
+    );
+  });
 });
 
 // match snapshots
-it.each(snapshots)('%s', (_name, style) => {
-  expect(inlineStyleParser(style)).toMatchSnapshot();
+describe('inline-style-parser', () => {
+  it.each(snapshots)('%s', (_name, style) => {
+    expect(inlineStyleParser(style)).toMatchSnapshot();
+  });
 });
 
 // errors
-it.each(errors)('throws error when argument is "%s"', value => {
-  expect(() => inlineStyleParser(value)).toThrow();
+describe('error', () => {
+  it.each(errors)('throws when argument is "%s"', value => {
+    expect(() => inlineStyleParser(value)).toThrow();
+  });
 });
 
 // one-off
-it.each`
-  style  | expected
-  ${':'} | ${[]}
-`('parses "%s"', ({ style, expected }) => {
-  expect(inlineStyleParser(style)).toEqual(expected);
+describe('misc', () => {
+  it.each`
+    style  | expected
+    ${':'} | ${[]}
+  `('correctly parses "$style"', ({ style, expected }) => {
+    expect(inlineStyleParser(style)).toEqual(expected);
+  });
 });
