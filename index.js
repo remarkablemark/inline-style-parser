@@ -3,11 +3,11 @@
 var commentre = /\/\*[^*]*\*+([^/*][^*]*\*+)*\//g;
 
 /**
- * @param {String} css
+ * @param {String} style
  * @param {Object} [options]
  * @return {Object[]}
  */
-module.exports = function(css, options) {
+module.exports = function(style, options) {
   options = options || {};
 
   /**
@@ -59,7 +59,7 @@ module.exports = function(css, options) {
   /**
    * Non-enumerable source string.
    */
-  Position.prototype.content = css;
+  Position.prototype.content = style;
 
   var errorsList = [];
 
@@ -77,7 +77,7 @@ module.exports = function(css, options) {
     err.filename = options.source;
     err.line = lineno;
     err.column = column;
-    err.source = css;
+    err.source = style;
 
     if (options.silent) {
       errorsList.push(err);
@@ -93,11 +93,11 @@ module.exports = function(css, options) {
    * @return {undefined|Array}
    */
   function match(re) {
-    var m = re.exec(css);
+    var m = re.exec(style);
     if (!m) return;
     var str = m[0];
     updatePosition(str);
-    css = css.slice(str.length);
+    style = style.slice(str.length);
     return m;
   }
 
@@ -132,24 +132,24 @@ module.exports = function(css, options) {
    */
   function comment() {
     var pos = position();
-    if ('/' != css.charAt(0) || '*' != css.charAt(1)) return;
+    if ('/' != style.charAt(0) || '*' != style.charAt(1)) return;
 
     var i = 2;
     while (
-      '' != css.charAt(i) &&
-      ('*' != css.charAt(i) || '/' != css.charAt(i + 1))
+      '' != style.charAt(i) &&
+      ('*' != style.charAt(i) || '/' != style.charAt(i + 1))
     )
       ++i;
     i += 2;
 
-    if ('' === css.charAt(i - 1)) {
+    if ('' === style.charAt(i - 1)) {
       return error('End of comment missing');
     }
 
-    var str = css.slice(2, i - 2);
+    var str = style.slice(2, i - 2);
     column += 2;
     updatePosition(str);
-    css = css.slice(i);
+    style = style.slice(i);
     column += 2;
 
     return pos({
