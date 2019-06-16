@@ -1,6 +1,18 @@
 // http://www.w3.org/TR/CSS21/grammar.html
 // https://github.com/visionmedia/css-parse/pull/49#issuecomment-30088027
-var commentre = /\/\*[^*]*\*+([^/*][^*]*\*+)*\//g;
+var COMMENT_REGEX = /\/\*[^*]*\*+([^/*][^*]*\*+)*\//g;
+
+var NEWLINE_REGEX = /\n/g;
+var WHITESPACE_REGEX = /^\s*/;
+
+// declaration
+var PROPERTY_REGEX = /^(\*?[-#/*\\\w]+(\[[0-9a-z_-]+\])?)\s*/;
+var COLON_REGEX = /^:\s*/;
+var VALUE_REGEX = /^((?:'(?:\\'|.)*?'|"(?:\\"|.)*?"|\([^)]*?\)|[^};])+)/;
+var SEMICOLON_REGEX = /^[;\s]*/;
+
+// https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String/Trim#Polyfill
+var TRIM_REGEX = /^\s+|\s+$/g;
 
 /**
  * @param {String} style
@@ -22,7 +34,7 @@ module.exports = function(style, options) {
    * @param {String} str
    */
   function updatePosition(str) {
-    var lines = str.match(/\n/g);
+    var lines = str.match(NEWLINE_REGEX);
     if (lines) lineno += lines.length;
     var i = str.lastIndexOf('\n');
     column = ~i ? str.length - i : column + str.length;
@@ -105,7 +117,7 @@ module.exports = function(style, options) {
    * Parse whitespace.
    */
   function whitespace() {
-    match(/^\s*/);
+    match(WHITESPACE_REGEX);
   }
 
   /**
@@ -167,24 +179,24 @@ module.exports = function(style, options) {
     var pos = position();
 
     // prop
-    var prop = match(/^(\*?[-#/*\\\w]+(\[[0-9a-z_-]+\])?)\s*/);
+    var prop = match(PROPERTY_REGEX);
     if (!prop) return;
     prop = trim(prop[0]);
 
     // :
-    if (!match(/^:\s*/)) return error("property missing ':'");
+    if (!match(COLON_REGEX)) return error("property missing ':'");
 
     // val
-    var val = match(/^((?:'(?:\\'|.)*?'|"(?:\\"|.)*?"|\([^)]*?\)|[^};])+)/);
+    var val = match(VALUE_REGEX);
 
     var ret = pos({
       type: 'declaration',
-      property: prop.replace(commentre, ''),
-      value: val ? trim(val[0]).replace(commentre, '') : ''
+      property: prop.replace(COMMENT_REGEX, ''),
+      value: val ? trim(val[0]).replace(COMMENT_REGEX, '') : ''
     });
 
     // ;
-    match(/^[;\s]*/);
+    match(SEMICOLON_REGEX);
 
     return ret;
   }
@@ -222,5 +234,5 @@ module.exports = function(style, options) {
  * @return {String}
  */
 function trim(str) {
-  return str ? str.replace(/^\s+|\s+$/g, '') : '';
+  return str ? str.replace(TRIM_REGEX, '') : '';
 }
