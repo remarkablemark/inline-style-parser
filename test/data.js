@@ -5,6 +5,7 @@ const cases = [
   'margin: 0 auto;',
   'border: 5px solid #BADA55;',
   'font-size: .75em; position:absolute;width: 33.3%; z-index:1337;',
+  'font-family: "Goudy Bookletter 1911", Gill Sans Extrabold, sans-serif;',
 
   // multiple of same property
   'color:rgba(0,0,0,1);color:white;',
@@ -41,7 +42,11 @@ const cases = [
 
   // custom
   'foo: bar;',
-  'foo:bar; baz:qux'
+  'foo:bar; baz:qux',
+
+  // misc
+  '',
+  'overflow:'
 ];
 
 const snapshots = [
