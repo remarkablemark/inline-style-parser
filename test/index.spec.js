@@ -1,6 +1,6 @@
 const cssParse = require('css/lib/parse');
 const inlineStyleParser = require('..');
-const { cases, snapshots } = require('./data');
+const { cases, errors, snapshots } = require('./data');
 
 /**
  * @param {string} inlineStyle
@@ -35,6 +35,11 @@ it.each(cases)('parses "%s"', style => {
 // match snapshots
 it.each(snapshots)('%s', (_name, style) => {
   expect(inlineStyleParser(style)).toMatchSnapshot();
+});
+
+// errors
+it.each(errors)('throws error when argument is "%s"', value => {
+  expect(() => inlineStyleParser(value)).toThrow();
 });
 
 // one-off

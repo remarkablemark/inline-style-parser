@@ -68,7 +68,24 @@ const snapshots = [
   ]
 ];
 
+const errors = [
+  undefined,
+  null,
+  true,
+  false,
+  0,
+  1,
+  {},
+  Object,
+  Array,
+  Date,
+  Function,
+  () => {},
+  'overflow'
+];
+
 module.exports = {
   cases,
+  errors,
   snapshots
 };
