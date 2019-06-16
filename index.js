@@ -160,8 +160,9 @@ module.exports = function(style, options) {
     while (
       EMPTY_STRING != style.charAt(i) &&
       (ASTERISK != style.charAt(i) || FORWARD_SLASH != style.charAt(i + 1))
-    )
+    ) {
       ++i;
+    }
     i += 2;
 
     if (EMPTY_STRING === style.charAt(i - 1)) {
@@ -191,7 +192,7 @@ module.exports = function(style, options) {
     // prop
     var prop = match(PROPERTY_REGEX);
     if (!prop) return;
-    prop = trim(prop[0]);
+    comment();
 
     // :
     if (!match(COLON_REGEX)) return error("property missing ':'");
@@ -201,9 +202,9 @@ module.exports = function(style, options) {
 
     var ret = pos({
       type: TYPE_DECLARATION,
-      property: prop.replace(COMMENT_REGEX, EMPTY_STRING),
+      property: trim(prop[0].replace(COMMENT_REGEX, EMPTY_STRING)),
       value: val
-        ? trim(val[0]).replace(COMMENT_REGEX, EMPTY_STRING)
+        ? trim(val[0].replace(COMMENT_REGEX, EMPTY_STRING))
         : EMPTY_STRING
     });
 
