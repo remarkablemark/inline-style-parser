@@ -51,6 +51,8 @@ const snapshots = [
     'text-align/**/ /*:*/ : /*:*//**/ center'
   ],
 
+  ['parses single declaration correctly', 'background-color: #C0FFEE;'],
+
   [
     'parses multiple declarations correctly',
     `

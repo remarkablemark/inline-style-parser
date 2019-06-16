@@ -104,3 +104,24 @@ Array [
   },
 ]
 `;
+
+exports[`parses single declaration correctly 1`] = `
+Array [
+  Object {
+    "position": Position {
+      "end": Object {
+        "column": 26,
+        "line": 1,
+      },
+      "source": undefined,
+      "start": Object {
+        "column": 1,
+        "line": 1,
+      },
+    },
+    "property": "background-color",
+    "type": "declaration",
+    "value": "#C0FFEE",
+  },
+]
+`;
