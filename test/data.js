@@ -49,6 +49,15 @@ const snapshots = [
   [
     'parses correctly when comment precedes colon',
     'text-align/**/ /*:*/ : /*:*//**/ center'
+  ],
+
+  [
+    'parses multiple declarations correctly',
+    `
+      background: -webkit-gradient(linear, left top, left bottom, from(white), to(black));
+      content  :  " "  ; /* comment */
+      foo:bar;-o-transition:all .5s
+    `
   ]
 ];
 

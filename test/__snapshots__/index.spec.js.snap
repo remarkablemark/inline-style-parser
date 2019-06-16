@@ -20,3 +20,87 @@ Array [
   },
 ]
 `;
+
+exports[`parses multiple declarations correctly 1`] = `
+Array [
+  Object {
+    "position": Position {
+      "end": Object {
+        "column": 90,
+        "line": 2,
+      },
+      "source": undefined,
+      "start": Object {
+        "column": 7,
+        "line": 2,
+      },
+    },
+    "property": "background",
+    "type": "declaration",
+    "value": "-webkit-gradient(linear, left top, left bottom, from(white), to(black))",
+  },
+  Object {
+    "position": Position {
+      "end": Object {
+        "column": 24,
+        "line": 3,
+      },
+      "source": undefined,
+      "start": Object {
+        "column": 7,
+        "line": 3,
+      },
+    },
+    "property": "content",
+    "type": "declaration",
+    "value": "\\" \\"",
+  },
+  Object {
+    "comment": " comment ",
+    "position": Position {
+      "end": Object {
+        "column": 39,
+        "line": 3,
+      },
+      "source": undefined,
+      "start": Object {
+        "column": 26,
+        "line": 3,
+      },
+    },
+    "type": "comment",
+  },
+  Object {
+    "position": Position {
+      "end": Object {
+        "column": 14,
+        "line": 4,
+      },
+      "source": undefined,
+      "start": Object {
+        "column": 7,
+        "line": 4,
+      },
+    },
+    "property": "foo",
+    "type": "declaration",
+    "value": "bar",
+  },
+  Object {
+    "position": Position {
+      "end": Object {
+        "column": 5,
+        "line": 5,
+      },
+      "source": undefined,
+      "start": Object {
+        "column": 15,
+        "line": 4,
+      },
+    },
+    "property": "-o-transition",
+    "type": "declaration",
+    "value": "all .5s",
+  },
+]
+`;
