@@ -14,6 +14,16 @@ var SEMICOLON_REGEX = /^[;\s]*/;
 // https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String/Trim#Polyfill
 var TRIM_REGEX = /^\s+|\s+$/g;
 
+// strings
+var NEWLINE = '\n';
+var FORWARD_SLASH = '/';
+var ASTERISK = '*';
+var EMPTY_STRING = '';
+
+// types
+var TYPE_COMMENT = 'comment';
+var TYPE_DECLARATION = 'declaration';
+
 /**
  * @param {String} style
  * @param {Object} [options]
@@ -36,7 +46,7 @@ module.exports = function(style, options) {
   function updatePosition(str) {
     var lines = str.match(NEWLINE_REGEX);
     if (lines) lineno += lines.length;
-    var i = str.lastIndexOf('\n');
+    var i = str.lastIndexOf(NEWLINE);
     column = ~i ? str.length - i : column + str.length;
   }
 
@@ -144,17 +154,17 @@ module.exports = function(style, options) {
    */
   function comment() {
     var pos = position();
-    if ('/' != style.charAt(0) || '*' != style.charAt(1)) return;
+    if (FORWARD_SLASH != style.charAt(0) || ASTERISK != style.charAt(1)) return;
 
     var i = 2;
     while (
-      '' != style.charAt(i) &&
-      ('*' != style.charAt(i) || '/' != style.charAt(i + 1))
+      EMPTY_STRING != style.charAt(i) &&
+      (ASTERISK != style.charAt(i) || FORWARD_SLASH != style.charAt(i + 1))
     )
       ++i;
     i += 2;
 
-    if ('' === style.charAt(i - 1)) {
+    if (EMPTY_STRING === style.charAt(i - 1)) {
       return error('End of comment missing');
     }
 
@@ -165,7 +175,7 @@ module.exports = function(style, options) {
     column += 2;
 
     return pos({
-      type: 'comment',
+      type: TYPE_COMMENT,
       comment: str
     });
   }
@@ -190,9 +200,11 @@ module.exports = function(style, options) {
     var val = match(VALUE_REGEX);
 
     var ret = pos({
-      type: 'declaration',
-      property: prop.replace(COMMENT_REGEX, ''),
-      value: val ? trim(val[0]).replace(COMMENT_REGEX, '') : ''
+      type: TYPE_DECLARATION,
+      property: prop.replace(COMMENT_REGEX, EMPTY_STRING),
+      value: val
+        ? trim(val[0]).replace(COMMENT_REGEX, EMPTY_STRING)
+        : EMPTY_STRING
     });
 
     // ;
@@ -234,5 +246,5 @@ module.exports = function(style, options) {
  * @return {String}
  */
 function trim(str) {
-  return str ? str.replace(TRIM_REGEX, '') : '';
+  return str ? str.replace(TRIM_REGEX, EMPTY_STRING) : EMPTY_STRING;
 }
