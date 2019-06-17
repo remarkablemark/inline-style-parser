@@ -30,6 +30,12 @@ var TYPE_DECLARATION = 'declaration';
  * @return {Object[]}
  */
 module.exports = function(style, options) {
+  if (typeof style !== 'string') {
+    throw new TypeError('First argument must be a string');
+  }
+
+  if (!style) return [];
+
   options = options || {};
 
   /**
