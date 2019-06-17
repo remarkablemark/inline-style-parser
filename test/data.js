@@ -69,19 +69,19 @@ const snapshots = [
 ];
 
 const errors = [
-  undefined,
-  null,
-  true,
-  false,
-  0,
-  1,
-  {},
-  Object,
-  Array,
-  Date,
-  Function,
-  () => {},
-  'overflow'
+  ...[
+    undefined,
+    null,
+    true,
+    false,
+    0,
+    1,
+    {},
+    ['Array'],
+    new Date(),
+    () => Function
+  ].map(value => [value, 'First argument must be a string']),
+  ['overflow', /property missing ':'$/]
 ];
 
 module.exports = {

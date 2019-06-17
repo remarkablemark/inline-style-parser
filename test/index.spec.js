@@ -43,8 +43,8 @@ describe('inline-style-parser', () => {
 
 // errors
 describe('error', () => {
-  it.each(errors)('throws when argument is "%s"', value => {
-    expect(() => inlineStyleParser(value)).toThrow();
+  it.each(errors)('throws when argument is `%s`', (value, message) => {
+    expect(() => inlineStyleParser(value)).toThrow(message);
   });
 });
 
