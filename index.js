@@ -28,6 +28,8 @@ var TYPE_DECLARATION = 'declaration';
  * @param {String} style
  * @param {Object} [options]
  * @return {Object[]}
+ * @throws {TypeError}
+ * @throws {Error}
  */
 module.exports = function(style, options) {
   if (typeof style !== 'string') {
@@ -157,6 +159,7 @@ module.exports = function(style, options) {
    * Parse comment.
    *
    * @return {Object}
+   * @throws {Error}
    */
   function comment() {
     var pos = position();
@@ -191,6 +194,7 @@ module.exports = function(style, options) {
    * Parse declaration.
    *
    * @return {Object}
+   * @throws {Error}
    */
   function declaration() {
     var pos = position();
