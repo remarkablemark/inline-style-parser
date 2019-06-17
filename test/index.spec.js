@@ -50,10 +50,16 @@ describe('error', () => {
 
 // one-off
 describe('misc', () => {
-  it.each`
-    style  | expected
-    ${':'} | ${[]}
-  `('correctly parses "$style"', ({ style, expected }) => {
-    expect(inlineStyleParser(style)).toEqual(expected);
-  });
+  describe.each`
+    style  | options             | expected
+    ${':'} | ${undefined}        | ${[]}
+    ${'a'} | ${{ silent: true }} | ${[]}
+  `(
+    'when style="$style" and options=`$options`',
+    ({ style, options, expected }) => {
+      it(`returns expected output \`${JSON.stringify(expected)}\``, () => {
+        expect(inlineStyleParser(style, options)).toEqual(expected);
+      });
+    }
+  );
 });

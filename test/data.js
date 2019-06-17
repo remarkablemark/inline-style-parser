@@ -81,7 +81,8 @@ const errors = [
     new Date(),
     () => Function
   ].map(value => [value, 'First argument must be a string']),
-  ['overflow', /property missing ':'$/]
+  ['overflow', /property missing ':'$/],
+  ['/*', /End of comment missing$/]
 ];
 
 module.exports = {
