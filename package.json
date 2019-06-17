@@ -10,8 +10,8 @@
     "release": "standard-version --no-verify",
     "test": "jest",
     "test:ci": "npm run test:coverage -- --ci",
-    "test:coverage": "npm test -- --coverage",
-    "test:watch": "npm test -- --watch"
+    "test:coverage": "jest --coverage --collectCoverageFrom=index.js",
+    "test:watch": "jest --watch"
   },
   "repository": {
     "type": "git",
