@@ -4,6 +4,10 @@
   "description": "An inline style parser.",
   "main": "index.js",
   "scripts": {
+    "build": "npm run clean && npm run build:min && npm run build:unmin",
+    "build:min": "NODE_ENV=production rollup --config --output.file dist/inline-style-parser.min.js",
+    "build:unmin": "rollup --config --file dist/inline-style-parser.js",
+    "clean": "rm -rf dist",
     "coveralls": "cat coverage/lcov.info | coveralls",
     "lint": "eslint --ignore-path .gitignore .",
     "lint:fix": "npm run lint -- --fix",
