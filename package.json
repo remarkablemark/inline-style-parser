@@ -11,6 +11,7 @@
     "coveralls": "cat coverage/lcov.info | coveralls",
     "lint": "eslint --ignore-path .gitignore .",
     "lint:fix": "npm run lint -- --fix",
+    "prepublishOnly": "npm run build",
     "release": "standard-version --no-verify",
     "test": "jest",
     "test:ci": "npm run test:coverage -- --ci",
@@ -47,5 +48,8 @@
     "rollup-plugin-uglify": "^6.0.2",
     "standard-version": "^6.0.1"
   },
+  "files": [
+    "./dist"
+  ],
   "license": "MIT"
 }
