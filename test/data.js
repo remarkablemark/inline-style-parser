@@ -28,7 +28,9 @@ const cases = [
 
   // text and url
   'content: "Lorem ipsum";',
+  'content: "foo: bar;";',
   'background-image: url(http://example.com/img.png)',
+  'background: #123456 url("https://foo.bar/image.png?v=2")',
 
   // vendor prefixes
   'background: -webkit-linear-gradient(90deg, black, #111)',
