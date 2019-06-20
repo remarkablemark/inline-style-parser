@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.1](https://github.com/remarkablemark/inline-style-parser/compare/v0.1.0...v0.1.1) (2019-06-20)
+
+
+### Build System
+
+* **package:** fix whitelisting of `/dist` in "files" field ([2c13b2f](https://github.com/remarkablemark/inline-style-parser/commit/2c13b2f))
+
+
+
 ## 0.1.0 (2019-06-19)
 
 
