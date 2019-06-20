@@ -28,6 +28,10 @@ Output:
     position: Position { start: [Object], end: [Object], source: undefined } } ]
 ```
 
+[JSFiddle](https://jsfiddle.net/remarkablemark/hcxbpwq8/) | [Repl.it](https://repl.it/@remarkablemark/inline-style-parser)
+
+See [usage](#usage) and [examples](https://github.com/remarkablemark/inline-style-parser/tree/master/examples).
+
 ## Installation
 
 [NPM](https://www.npmjs.com/package/inline-style-parser):
