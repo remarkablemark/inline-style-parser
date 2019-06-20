@@ -1,0 +1,20 @@
+<textarea cols="50" rows="5">color: #C0FFEE;
+background: #BADA55;</textarea>
+<pre><code></code></pre>
+
+<script src="../dist/inline-style-parser.js"></script>
+<script>
+  var code = document.querySelector('code');
+  var textarea = document.querySelector('textarea');
+
+  function renderOutput(event) {
+    code.innerText = JSON.stringify(
+      window.InlineStyleParser(event.target.value),
+      null,
+      2
+    );
+  }
+
+  textarea.addEventListener('input', renderOutput);
+  renderOutput({ target: textarea });
+</script>
