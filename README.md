@@ -3,8 +3,8 @@
 [![NPM](https://nodei.co/npm/inline-style-parser.png)](https://nodei.co/npm/inline-style-parser/)
 
 [![NPM version](https://img.shields.io/npm/v/inline-style-parser.svg)](https://www.npmjs.com/package/inline-style-parser)
-[![Build Status](https://travis-ci.org/remarkablemark/inline-style-parser.svg?branch=master)](https://travis-ci.org/remarkablemark/inline-style-parser)
-[![Coverage Status](https://coveralls.io/repos/github/remarkablemark/inline-style-parser/badge.svg?branch=master)](https://coveralls.io/github/remarkablemark/inline-style-parser?branch=master)
+[![build](https://github.com/remarkablemark/inline-style-parser/actions/workflows/build.yml/badge.svg)](https://github.com/remarkablemark/inline-style-parser/actions/workflows/build.yml)
+[![codecov](https://codecov.io/gh/remarkablemark/inline-style-parser/branch/master/graph/badge.svg?token=B8EEK5709W)](https://codecov.io/gh/remarkablemark/inline-style-parser)
 
 An inline style parser copied from [`css/lib/parse/index.js`](https://github.com/reworkcss/css/blob/v2.2.4/lib/parse/index.js):
 
