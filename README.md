@@ -28,7 +28,7 @@ Output:
     position: Position { start: [Object], end: [Object], source: undefined } } ]
 ```
 
-[JSFiddle](https://jsfiddle.net/remarkablemark/hcxbpwq8/) | [Repl.it](https://repl.it/@remarkablemark/inline-style-parser)
+[JSFiddle](https://jsfiddle.net/remarkablemark/hcxbpwq8/) | [Replit](https://replit.com/@remarkablemark/inline-style-parser)
 
 See [usage](#usage) and [examples](https://github.com/remarkablemark/inline-style-parser/tree/master/examples).
 
@@ -37,13 +37,13 @@ See [usage](#usage) and [examples](https://github.com/remarkablemark/inline-styl
 [NPM](https://www.npmjs.com/package/inline-style-parser):
 
 ```sh
-$ npm install inline-style-parser --save
+npm install inline-style-parser --save
 ```
 
 [Yarn](https://yarnpkg.com/package/inline-style-parser):
 
 ```sh
-$ yarn add inline-style-parser
+yarn add inline-style-parser
 ```
 
 [CDN](https://unpkg.com/inline-style-parser/):
@@ -184,37 +184,37 @@ parse('/*');    // throws Error
 Run tests:
 
 ```sh
-$ npm test
+npm test
 ```
 
 Run tests in watch mode:
 
 ```sh
-$ npm run test:watch
+npm run test:watch
 ```
 
 Run tests with coverage:
 
 ```sh
-$ npm run test:coverage
+npm run test:coverage
 ```
 
 Run tests in CI mode:
 
 ```sh
-$ npm run test:ci
+npm run test:ci
 ```
 
 Lint files:
 
 ```sh
-$ npm run lint
+npm run lint
 ```
 
 Fix lint errors:
 
 ```sh
-$ npm run lint:fix
+npm run lint:fix
 ```
 
 ## Release
@@ -222,8 +222,8 @@ $ npm run lint:fix
 Only collaborators with credentials can release and publish:
 
 ```sh
-$ npm run release
-$ git push --follow-tags && npm publish
+npm run release
+git push --follow-tags && npm publish
 ```
 
 ## License
