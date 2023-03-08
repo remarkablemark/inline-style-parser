@@ -2,9 +2,11 @@
 
 [![NPM](https://nodei.co/npm/inline-style-parser.png)](https://nodei.co/npm/inline-style-parser/)
 
-[![NPM version](https://img.shields.io/npm/v/inline-style-parser.svg)](https://www.npmjs.com/package/inline-style-parser)
+[![NPM version](https://badgen.net/npm/v/inline-style-parser)](https://www.npmjs.com/package/inline-style-parser)
+[![Bundlephobia minified + gzip](https://badgen.net/bundlephobia/minzip/inline-style-parser)](https://bundlephobia.com/package/inline-style-parser)
 [![build](https://github.com/remarkablemark/inline-style-parser/actions/workflows/build.yml/badge.svg)](https://github.com/remarkablemark/inline-style-parser/actions/workflows/build.yml)
 [![codecov](https://codecov.io/gh/remarkablemark/inline-style-parser/branch/master/graph/badge.svg?token=B8EEK5709W)](https://codecov.io/gh/remarkablemark/inline-style-parser)
+[![NPM downloads](https://badgen.net/npm/dm/inline-style-parser)](https://www.npmjs.com/package/inline-style-parser)
 
 An inline style parser copied from [`css/lib/parse/index.js`](https://github.com/reworkcss/css/blob/v2.2.4/lib/parse/index.js):
 
