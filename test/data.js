@@ -82,7 +82,7 @@ const errors = [
     ['Array'],
     new Date(),
     () => Function
-  ].map(value => [value, 'First argument must be a string']),
+  ].map((value) => [value, 'First argument must be a string']),
   ['overflow', /property missing ':'$/],
   ['/*', /End of comment missing$/]
 ];

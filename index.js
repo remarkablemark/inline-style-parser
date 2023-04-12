@@ -31,7 +31,7 @@ var TYPE_DECLARATION = 'declaration';
  * @throws {TypeError}
  * @throws {Error}
  */
-module.exports = function(style, options) {
+module.exports = function (style, options) {
   if (typeof style !== 'string') {
     throw new TypeError('First argument must be a string');
   }
@@ -65,7 +65,7 @@ module.exports = function(style, options) {
    */
   function position() {
     var start = { line: lineno, column: column };
-    return function(node) {
+    return function (node) {
       node.position = new Position(start);
       whitespace();
       return node;

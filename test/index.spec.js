@@ -27,7 +27,7 @@ function removePosition(declarations) {
 
 // compare output with `css.parse` declarations
 describe('when compared to `css.parse`', () => {
-  it.each(cases)('correctly parses "%s"', style => {
+  it.each(cases)('correctly parses "%s"', (style) => {
     expect(removePosition(inlineStyleParser(style))).toEqual(
       removePosition(getDeclarations(style))
     );
