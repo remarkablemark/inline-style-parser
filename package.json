@@ -39,7 +39,7 @@
     "coveralls": "^3.0.4",
     "css": "2.2.4",
     "eslint": "^8.38.0",
-    "eslint-plugin-prettier": "^3.1.0",
+    "eslint-plugin-prettier": "^4.2.1",
     "husky": "8.0.3",
     "jest": "^24.8.0",
     "lint-staged": "^13.2.1",
