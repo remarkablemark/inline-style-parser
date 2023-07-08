@@ -1,15 +1,15 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`inline-style-parser correctly parses multiple declarations 1`] = `
-Array [
-  Object {
+[
+  {
     "position": Position {
-      "end": Object {
+      "end": {
         "column": 90,
         "line": 2,
       },
       "source": undefined,
-      "start": Object {
+      "start": {
         "column": 7,
         "line": 2,
       },
@@ -18,45 +18,45 @@ Array [
     "type": "declaration",
     "value": "-webkit-gradient(linear, left top, left bottom, from(white), to(black))",
   },
-  Object {
+  {
     "position": Position {
-      "end": Object {
+      "end": {
         "column": 24,
         "line": 3,
       },
       "source": undefined,
-      "start": Object {
+      "start": {
         "column": 7,
         "line": 3,
       },
     },
     "property": "content",
     "type": "declaration",
-    "value": "\\" \\"",
+    "value": "" "",
   },
-  Object {
+  {
     "comment": " comment ",
     "position": Position {
-      "end": Object {
+      "end": {
         "column": 39,
         "line": 3,
       },
       "source": undefined,
-      "start": Object {
+      "start": {
         "column": 26,
         "line": 3,
       },
     },
     "type": "comment",
   },
-  Object {
+  {
     "position": Position {
-      "end": Object {
+      "end": {
         "column": 14,
         "line": 4,
       },
       "source": undefined,
-      "start": Object {
+      "start": {
         "column": 7,
         "line": 4,
       },
@@ -65,14 +65,14 @@ Array [
     "type": "declaration",
     "value": "bar",
   },
-  Object {
+  {
     "position": Position {
-      "end": Object {
+      "end": {
         "column": 5,
         "line": 5,
       },
       "source": undefined,
-      "start": Object {
+      "start": {
         "column": 15,
         "line": 4,
       },
@@ -85,15 +85,15 @@ Array [
 `;
 
 exports[`inline-style-parser correctly parses single declaration 1`] = `
-Array [
-  Object {
+[
+  {
     "position": Position {
-      "end": Object {
+      "end": {
         "column": 26,
         "line": 1,
       },
       "source": undefined,
-      "start": Object {
+      "start": {
         "column": 1,
         "line": 1,
       },
@@ -106,15 +106,15 @@ Array [
 `;
 
 exports[`inline-style-parser correctly parses when comment precedes colon 1`] = `
-Array [
-  Object {
+[
+  {
     "position": Position {
-      "end": Object {
+      "end": {
         "column": 40,
         "line": 1,
       },
       "source": undefined,
-      "start": Object {
+      "start": {
         "column": 1,
         "line": 1,
       },
