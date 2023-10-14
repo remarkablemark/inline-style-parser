@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.1.2](https://github.com/remarkablemark/inline-style-parser/compare/v0.1.1...v0.1.2) (2023-10-14)
+
+
+### Build System
+
+* **rollup:** upgrade rollup, replace plugins, and generate sourcemap ([090cfad](https://github.com/remarkablemark/inline-style-parser/commit/090cfad21d89b9da6bbf215301793a8efb182523))
+
 ### [0.1.1](https://github.com/remarkablemark/inline-style-parser/compare/v0.1.0...v0.1.1) (2019-06-20)
 
 
