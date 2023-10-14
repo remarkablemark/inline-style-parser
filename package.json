@@ -4,14 +4,12 @@
   "description": "An inline style parser.",
   "main": "index.js",
   "scripts": {
-    "build": "npm run clean && npm run build:min && npm run build:unmin",
-    "build:min": "NODE_ENV=production rollup --config --output.file dist/inline-style-parser.min.js --sourcemap",
-    "build:unmin": "NODE_ENV=development rollup --config --file dist/inline-style-parser.js",
+    "build": "rollup --config --failAfterWarnings",
     "clean": "rm -rf dist",
     "coveralls": "cat coverage/lcov.info | coveralls",
     "lint": "eslint --ignore-path .gitignore .",
     "lint:fix": "npm run lint -- --fix",
-    "prepublishOnly": "pinst --disable && npm run build",
+    "prepublishOnly": "pinst --disable && npm run lint && npm test && npm run build",
     "test": "jest",
     "test:ci": "npm run test:coverage -- --ci",
     "test:coverage": "jest --coverage --collectCoverageFrom=index.js",
@@ -36,6 +34,8 @@
   "devDependencies": {
     "@commitlint/cli": "17.8.0",
     "@commitlint/config-conventional": "17.8.0",
+    "@rollup/plugin-commonjs": "25.0.5",
+    "@rollup/plugin-terser": "0.4.4",
     "coveralls": "3.1.1",
     "css": "3.0.0",
     "eslint": "8.51.0",
@@ -45,9 +45,7 @@
     "lint-staged": "14.0.0",
     "pinst": "3.0.0",
     "prettier": "3.0.3",
-    "rollup": "1.15.6",
-    "rollup-plugin-commonjs": "10.0.0",
-    "rollup-plugin-uglify": "6.0.4"
+    "rollup": "4.1.0"
   },
   "files": [
     "/dist"
