@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.2.1](https://github.com/remarkablemark/inline-style-parser/compare/v0.2.0...v0.2.1) (2023-10-15)
+
+
+### Bug Fixes
+
+* **package:** add `index.d.ts` to "files" in package.json ([bac1b29](https://github.com/remarkablemark/inline-style-parser/commit/bac1b29ccb36818204936f7983bf4844094560fc))
+
 ## [0.2.0](https://github.com/remarkablemark/inline-style-parser/compare/v0.1.2...v0.2.0) (2023-10-15)
 
 

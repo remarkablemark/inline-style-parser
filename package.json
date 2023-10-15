@@ -1,6 +1,6 @@
 {
   "name": "inline-style-parser",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "An inline style parser.",
   "main": "index.js",
   "scripts": {
