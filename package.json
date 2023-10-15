@@ -12,6 +12,7 @@
     "test": "jest",
     "test:ci": "npm run test:coverage -- --ci",
     "test:coverage": "jest --coverage --collectCoverageFrom=index.js",
+    "test:esm": "node --test test/index.test.mjs",
     "test:watch": "jest --watch",
     "postinstall": "husky install",
     "postpublish": "pinst --enable"
