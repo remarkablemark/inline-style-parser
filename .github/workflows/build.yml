@@ -12,5 +12,14 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Build bundle
+      - name: Run unit tests
+        run: npm run test:ci
+
+      - name: Codecov
+        uses: codecov/codecov-action@v3
+
+      - name: Run module tests
+        run: npm run test:esm
+
+      - name: Build artifacts
         run: npm run build
