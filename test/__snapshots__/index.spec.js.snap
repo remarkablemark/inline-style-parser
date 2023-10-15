@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`inline-style-parser correctly parses multiple declarations 1`] = `
+exports[`inline-style-parser parses multiple declarations 1`] = `
 [
   {
     "position": Position {
@@ -84,7 +84,7 @@ exports[`inline-style-parser correctly parses multiple declarations 1`] = `
 ]
 `;
 
-exports[`inline-style-parser correctly parses single declaration 1`] = `
+exports[`inline-style-parser parses single declaration 1`] = `
 [
   {
     "position": Position {
@@ -105,7 +105,7 @@ exports[`inline-style-parser correctly parses single declaration 1`] = `
 ]
 `;
 
-exports[`inline-style-parser correctly parses when comment precedes colon 1`] = `
+exports[`inline-style-parser parses when comment precedes colon 1`] = `
 [
   {
     "position": Position {
@@ -122,6 +122,27 @@ exports[`inline-style-parser correctly parses when comment precedes colon 1`] = 
     "property": "text-align",
     "type": "declaration",
     "value": "center",
+  },
+]
+`;
+
+exports[`options source parses declaration 1`] = `
+[
+  {
+    "position": Position {
+      "end": {
+        "column": 4,
+        "line": 1,
+      },
+      "source": "file.css",
+      "start": {
+        "column": 1,
+        "line": 1,
+      },
+    },
+    "property": "a",
+    "type": "declaration",
+    "value": "b",
   },
 ]
 `;

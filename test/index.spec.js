@@ -27,7 +27,7 @@ function removePosition(declarations) {
 
 // compare output with `css.parse` declarations
 describe('when compared to `css.parse`', () => {
-  it.each(cases)('correctly parses "%s"', (style) => {
+  it.each(cases)('parses "%s"', (style) => {
     expect(removePosition(inlineStyleParser(style))).toEqual(
       removePosition(getDeclarations(style))
     );
@@ -48,12 +48,12 @@ describe('error', () => {
   });
 });
 
-// one-off
-describe('misc', () => {
+describe('options', () => {
   describe.each`
     style  | options             | expected
     ${':'} | ${undefined}        | ${[]}
     ${'a'} | ${{ silent: true }} | ${[]}
+    ${''}  | ${{ source: 'a' }}  | ${[]}
   `(
     'when style="$style" and options=`$options`',
     ({ style, options, expected }) => {
@@ -62,4 +62,12 @@ describe('misc', () => {
       });
     }
   );
+
+  describe('source', () => {
+    it('parses declaration', () => {
+      expect(
+        inlineStyleParser('a:b', { source: 'file.css' })
+      ).toMatchSnapshot();
+    });
+  });
 });
