@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.2.2](https://github.com/remarkablemark/inline-style-parser/compare/v0.2.1...v0.2.2) (2023-10-15)
+
+
+### Bug Fixes
+
+* **index:** export types `Declaration` and `Comment` ([5500e24](https://github.com/remarkablemark/inline-style-parser/commit/5500e24ce617c86d661e6e256d44a57f5b5aadb0))
+
 ## [0.2.1](https://github.com/remarkablemark/inline-style-parser/compare/v0.2.0...v0.2.1) (2023-10-15)
 
 
