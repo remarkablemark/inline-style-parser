@@ -10,14 +10,14 @@ interface Position {
   source?: string;
 }
 
-interface Declaration {
+export interface Declaration {
   type: 'declaration';
   property: string;
   value: string;
   position: Position;
 }
 
-interface Comment {
+export interface Comment {
   type: 'comment';
   comment: string;
   position: Position;
