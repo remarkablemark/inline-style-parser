@@ -46,7 +46,8 @@
     "rollup": "4.1.0"
   },
   "files": [
-    "/dist"
+    "/dist",
+    "/index.d.ts"
   ],
   "license": "MIT"
 }
