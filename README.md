@@ -8,7 +8,7 @@
 [![codecov](https://codecov.io/gh/remarkablemark/inline-style-parser/branch/master/graph/badge.svg?token=B8EEK5709W)](https://codecov.io/gh/remarkablemark/inline-style-parser)
 [![NPM downloads](https://badgen.net/npm/dm/inline-style-parser)](https://www.npmjs.com/package/inline-style-parser)
 
-An inline style parser copied from [`css/lib/parse/index.js`](https://github.com/reworkcss/css/blob/v2.2.4/lib/parse/index.js):
+Inline style parser copied from [`css/lib/parse/index.js`](https://github.com/reworkcss/css/blob/v2.2.4/lib/parse/index.js):
 
 ```
 InlineStyleParser(string)
@@ -17,7 +17,8 @@ InlineStyleParser(string)
 Example:
 
 ```js
-var parse = require('inline-style-parser');
+const parse = require('inline-style-parser');
+
 parse('color: #BADA55;');
 ```
 
@@ -30,9 +31,7 @@ Output:
     position: Position { start: [Object], end: [Object], source: undefined } } ]
 ```
 
-[JSFiddle](https://jsfiddle.net/remarkablemark/hcxbpwq8/) | [Replit](https://replit.com/@remarkablemark/inline-style-parser)
-
-See [usage](#usage) and [examples](https://github.com/remarkablemark/inline-style-parser/tree/master/examples).
+[JSFiddle](https://jsfiddle.net/remarkablemark/hcxbpwq8/) | [Replit](https://replit.com/@remarkablemark/inline-style-parser) | [Examples](https://github.com/remarkablemark/inline-style-parser/tree/master/examples)
 
 ## Installation
 
@@ -59,14 +58,16 @@ yarn add inline-style-parser
 
 ## Usage
 
-Import the module:
+Import with ES Modules:
 
 ```js
-// CommonJS
-const parse = require('inline-style-parser');
-
-// ES Modules
 import parse from 'inline-style-parser';
+```
+
+Or require with CommonJS:
+
+```js
+const parse = require('inline-style-parser');
 ```
 
 Parse single declaration:
@@ -225,4 +226,4 @@ Release and publish are automated by [Release Please](https://github.com/googlea
 
 ## License
 
-MIT. See [license](https://github.com/reworkcss/css/blob/v2.2.4/LICENSE) from original project.
+MIT. See the [license](https://github.com/reworkcss/css/blob/v2.2.4/LICENSE) from the original project.
