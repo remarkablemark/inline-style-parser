@@ -30,7 +30,7 @@
     "css"
   ],
   "devDependencies": {
-    "@commitlint/cli": "19.1.0",
+    "@commitlint/cli": "19.2.0",
     "@commitlint/config-conventional": "19.1.0",
     "@rollup/plugin-commonjs": "25.0.7",
     "@rollup/plugin-terser": "0.4.4",
