@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.2.3](https://github.com/remarkablemark/inline-style-parser/compare/v0.2.2...v0.2.3) (2024-03-26)
+
+
+### Documentation
+
+* **license:** add MIT license ([eca2bed](https://github.com/remarkablemark/inline-style-parser/commit/eca2bed480f89fb6a2e1566b1ec504a8c2b0d9ff)), closes [#124](https://github.com/remarkablemark/inline-style-parser/issues/124)
+
 ## [0.2.2](https://github.com/remarkablemark/inline-style-parser/compare/v0.2.1...v0.2.2) (2023-10-15)
 
 
