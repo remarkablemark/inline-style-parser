@@ -226,4 +226,4 @@ Release and publish are automated by [Release Please](https://github.com/googlea
 
 ## License
 
-MIT. See the [license](https://github.com/reworkcss/css/blob/v2.2.4/LICENSE) from the original project.
+[MIT](https://github.com/remarkablemark/inline-style-parser/blob/master/LICENSE). See the [license](https://github.com/reworkcss/css/blob/v2.2.4/LICENSE) from the original project.
