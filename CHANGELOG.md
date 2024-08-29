@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.2.4](https://github.com/remarkablemark/inline-style-parser/compare/v0.2.3...v0.2.4) (2024-08-29)
+
+
+### Continuous Integration
+
+* **github:** publish package to npm registry with provenance ([0b0e756](https://github.com/remarkablemark/inline-style-parser/commit/0b0e756324306750a01bfacfbb53d10a30b76749))
+
 ## [0.2.3](https://github.com/remarkablemark/inline-style-parser/compare/v0.2.2...v0.2.3) (2024-03-26)
 
 
