@@ -38,7 +38,7 @@
     "@rollup/plugin-commonjs": "28.0.3",
     "@rollup/plugin-terser": "0.4.4",
     "css": "3.0.0",
-    "eslint": "9.23.0",
+    "eslint": "9.24.0",
     "eslint-plugin-prettier": "5.2.6",
     "eslint-plugin-simple-import-sort": "12.1.1",
     "globals": "16.0.0",
