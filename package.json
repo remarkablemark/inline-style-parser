@@ -10,10 +10,10 @@
     "lint:fix": "npm run lint -- --fix",
     "prepare": "husky",
     "prepublishOnly": "npm run lint && npm test && npm run build",
-    "test": "jest",
-    "test:ci": "CI=true jest --ci --colors --coverage --collectCoverageFrom=index.js",
-    "test:esm": "node --test test/index.test.mjs",
-    "test:watch": "jest --watch"
+    "test": "jest --colors --testPathIgnorePatterns=test/index.test.mjs",
+    "test:ci": "CI=true npm test -- --ci --coverage --collectCoverageFrom=index.js",
+    "test:esm": "node --test **/*.test.mjs",
+    "test:watch": "npm test -- --watch"
   },
   "repository": {
     "type": "git",
@@ -43,7 +43,7 @@
     "eslint-plugin-simple-import-sort": "12.1.1",
     "globals": "16.3.0",
     "husky": "9.1.7",
-    "jest": "29.7.0",
+    "jest": "30.0.5",
     "lint-staged": "16.1.5",
     "prettier": "3.6.2",
     "rollup": "4.46.2"
