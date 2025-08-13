@@ -10,10 +10,10 @@
     "lint:fix": "npm run lint -- --fix",
     "prepare": "husky",
     "prepublishOnly": "npm run lint && npm test && npm run build",
-    "test": "jest",
-    "test:ci": "CI=true jest --ci --colors --coverage --collectCoverageFrom=index.js",
-    "test:esm": "node --test test/index.test.mjs",
-    "test:watch": "jest --watch"
+    "test": "jest --colors --testPathIgnorePatterns=test/index.test.mjs",
+    "test:ci": "CI=true npm test -- --ci --coverage --collectCoverageFrom=index.js",
+    "test:esm": "node --test **/*.test.mjs",
+    "test:watch": "npm test -- --watch"
   },
   "repository": {
     "type": "git",
