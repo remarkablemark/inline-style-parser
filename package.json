@@ -46,7 +46,7 @@
     "jest": "30.0.5",
     "lint-staged": "16.1.5",
     "prettier": "3.6.2",
-    "rollup": "4.46.4"
+    "rollup": "4.47.0"
   },
   "files": [
     "/dist",
