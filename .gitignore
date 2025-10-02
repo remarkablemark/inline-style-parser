@@ -43,6 +43,8 @@ jspm_packages
 # Build files
 build
 dist
+cjs
+esm
 
 # Vim swap files
 *.swp

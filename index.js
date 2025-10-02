@@ -31,7 +31,7 @@ var TYPE_DECLARATION = 'declaration';
  * @throws {TypeError}
  * @throws {Error}
  */
-module.exports = function (style, options) {
+export default function (style, options) {
   if (typeof style !== 'string') {
     throw new TypeError('First argument must be a string');
   }
@@ -248,7 +248,7 @@ module.exports = function (style, options) {
 
   whitespace();
   return declarations();
-};
+}
 
 /**
  * Trim `str`.
