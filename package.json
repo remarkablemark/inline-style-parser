@@ -24,7 +24,7 @@
     "lint": "eslint .",
     "lint:fix": "npm run lint -- --fix",
     "prepare": "husky",
-    "prepublishOnly": "npm run lint && npm test && npm run build",
+    "prepublishOnly": "npm run lint && npm run build && npm test",
     "test": "jest --colors --testPathIgnorePatterns=test/index.test.mjs",
     "test:ci": "CI=true npm test -- --ci --coverage --collectCoverageFrom=cjs/index.js",
     "test:esm": "node --test **/*.test.mjs",
