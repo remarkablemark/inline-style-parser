@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.2.5](https://github.com/remarkablemark/inline-style-parser/compare/v0.2.4...v0.2.5) (2025-10-02)
+
+
+### Bug Fixes
+
+* add build before tests in ci ([1fc0047](https://github.com/remarkablemark/inline-style-parser/commit/1fc00478a8cfa41847d9bf7208f5d2a31d7204b5))
+* add esm build ([60791fb](https://github.com/remarkablemark/inline-style-parser/commit/60791fba88abaa90ce0648939818468ee2cad4c9))
+* remove esm build dir ([0e58071](https://github.com/remarkablemark/inline-style-parser/commit/0e580718f9e7e863ff3bfe16bf3f0a01ffa5daaf))
+
 ## [0.2.4](https://github.com/remarkablemark/inline-style-parser/compare/v0.2.3...v0.2.4) (2024-08-29)
 
 
