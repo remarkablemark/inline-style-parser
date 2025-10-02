@@ -1,10 +1,11 @@
 import commonjs from '@rollup/plugin-commonjs';
+import resolve from '@rollup/plugin-node-resolve';
 import terser from '@rollup/plugin-terser';
 
 /**
- * Build rollup config for development or production.
+ * UMD build configuration for development or production.
  */
-const getConfig = (minify = false) => ({
+const getUMDConfig = (minify = false) => ({
   input: 'index.js',
   output: {
     file: `dist/inline-style-parser${minify ? '.min' : ''}.js`,
@@ -12,9 +13,9 @@ const getConfig = (minify = false) => ({
     name: 'InlineStyleParser',
     sourcemap: true
   },
-  plugins: [commonjs(), minify && terser()]
+  plugins: [commonjs(), resolve(), minify && terser()]
 });
 
-const configs = [getConfig(), getConfig(true)];
+const configs = [getUMDConfig(), getUMDConfig(true)];
 
 export default configs;

@@ -31,7 +31,7 @@ var TYPE_DECLARATION = 'declaration';
  * @throws {TypeError}
  * @throws {Error}
  */
-export default function (style, options) {
+function index(style, options) {
   if (typeof style !== 'string') {
     throw new TypeError('First argument must be a string');
   }
@@ -91,8 +91,6 @@ export default function (style, options) {
    */
   Position.prototype.content = style;
 
-  var errorsList = [];
-
   /**
    * Error `msg`.
    *
@@ -109,9 +107,8 @@ export default function (style, options) {
     err.column = column;
     err.source = style;
 
-    if (options.silent) {
-      errorsList.push(err);
-    } else {
+    if (options.silent);
+    else {
       throw err;
     }
   }
@@ -259,3 +256,6 @@ export default function (style, options) {
 function trim(str) {
   return str ? str.replace(TRIM_REGEX, EMPTY_STRING) : EMPTY_STRING;
 }
+
+export { index as default };
+//# sourceMappingURL=index.mjs.map

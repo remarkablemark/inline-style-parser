@@ -1,3 +1,5 @@
+'use strict';
+
 // http://www.w3.org/TR/CSS21/grammar.html
 // https://github.com/visionmedia/css-parse/pull/49#issuecomment-30088027
 var COMMENT_REGEX = /\/\*[^*]*\*+([^/*][^*]*\*+)*\//g;
@@ -31,7 +33,7 @@ var TYPE_DECLARATION = 'declaration';
  * @throws {TypeError}
  * @throws {Error}
  */
-export default function (style, options) {
+function index(style, options) {
   if (typeof style !== 'string') {
     throw new TypeError('First argument must be a string');
   }
@@ -91,8 +93,6 @@ export default function (style, options) {
    */
   Position.prototype.content = style;
 
-  var errorsList = [];
-
   /**
    * Error `msg`.
    *
@@ -109,9 +109,8 @@ export default function (style, options) {
     err.column = column;
     err.source = style;
 
-    if (options.silent) {
-      errorsList.push(err);
-    } else {
+    if (options.silent);
+    else {
       throw err;
     }
   }
@@ -259,3 +258,6 @@ export default function (style, options) {
 function trim(str) {
   return str ? str.replace(TRIM_REGEX, EMPTY_STRING) : EMPTY_STRING;
 }
+
+module.exports = index;
+//# sourceMappingURL=index.js.map
