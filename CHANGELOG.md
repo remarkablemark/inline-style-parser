@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.2.6](https://github.com/remarkablemark/inline-style-parser/compare/v0.2.5...v0.2.6) (2025-10-03)
+
+
+### Bug Fixes
+
+* **package:** fix esm and cjs types ([c90534b](https://github.com/remarkablemark/inline-style-parser/commit/c90534b518f03e1ab3ba229e73db0e6df03a0dbb))
+
 ## [0.2.5](https://github.com/remarkablemark/inline-style-parser/compare/v0.2.4...v0.2.5) (2025-10-02)
 
 
