@@ -11,18 +11,19 @@
       "default": "./esm/index.mjs"
     },
     "require": {
-      "types": "./cjs/index.d.ts",
+      "types": "./cjs/index.d.cts",
       "default": "./cjs/index.js"
     }
   },
   "scripts": {
     "build": "run-s build:*",
-    "build:cjs": "rollup --config rollup.cjs.config.mjs --failAfterWarnings",
-    "build:esm": "rollup --config rollup.esm.config.mjs --failAfterWarnings",
+    "build:cjs": "rollup --config rollup.cjs.config.mjs --failAfterWarnings && cp index.d.ts cjs/index.d.cts",
+    "build:esm": "rollup --config rollup.esm.config.mjs --failAfterWarnings && cp index.d.ts esm/index.d.mts",
     "build:umd": "rollup --config rollup.umd.config.mjs --failAfterWarnings",
     "clean": "rm -rf cjs dist esm",
     "lint": "eslint .",
     "lint:fix": "npm run lint -- --fix",
+    "lint:package": "publint",
     "prepare": "husky",
     "prepublishOnly": "npm run lint && npm run build && npm test",
     "test": "jest --colors --testPathIgnorePatterns=test/index.test.mjs",
