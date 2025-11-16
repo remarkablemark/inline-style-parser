@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.2.7](https://github.com/remarkablemark/inline-style-parser/compare/v0.2.6...v0.2.7) (2025-11-16)
+
+
+### Documentation
+
+* **readme:** replace badgen.net with shields.io status badges ([7ef8d51](https://github.com/remarkablemark/inline-style-parser/commit/7ef8d51dcdd06d9e0a5dea5ec726fc262f8918db))
+
 ## [0.2.6](https://github.com/remarkablemark/inline-style-parser/compare/v0.2.5...v0.2.6) (2025-10-03)
 
 
