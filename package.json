@@ -1,6 +1,6 @@
 {
   "name": "inline-style-parser",
-  "version": "0.2.6",
+  "version": "0.2.7",
   "description": "An inline style parser.",
   "main": "./cjs/index.js",
   "module": "./esm/index.mjs",
