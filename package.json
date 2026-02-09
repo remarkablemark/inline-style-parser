@@ -55,7 +55,7 @@
     "@rollup/plugin-node-resolve": "16.0.3",
     "@rollup/plugin-terser": "0.4.4",
     "css": "3.0.0",
-    "eslint": "9.39.2",
+    "eslint": "10.0.0",
     "eslint-plugin-prettier": "5.5.5",
     "eslint-plugin-simple-import-sort": "12.1.1",
     "globals": "17.3.0",
