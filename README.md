@@ -8,7 +8,7 @@
 [![codecov](https://codecov.io/gh/remarkablemark/inline-style-parser/branch/master/graph/badge.svg?token=B8EEK5709W)](https://codecov.io/gh/remarkablemark/inline-style-parser)
 [![NPM downloads](https://img.shields.io/npm/dm/inline-style-parser)](https://www.npmjs.com/package/inline-style-parser)
 
-Inline style parser copied from [`css/lib/parse/index.js`](https://github.com/reworkcss/css/blob/v2.2.4/lib/parse/index.js):
+Inline style parser copied from [css/lib/parse/index.js](https://github.com/reworkcss/css/blob/v3.0.0/lib/parse/index.js):
 
 ```
 InlineStyleParser(string)
@@ -226,4 +226,4 @@ Release and publish are automated by [Release Please](https://github.com/googlea
 
 ## License
 
-[MIT](https://github.com/remarkablemark/inline-style-parser/blob/master/LICENSE). See the [license](https://github.com/reworkcss/css/blob/v2.2.4/LICENSE) from the original project.
+[MIT](https://github.com/remarkablemark/inline-style-parser/blob/master/LICENSE). See the [license](https://github.com/reworkcss/css/blob/v3.0.0/LICENSE) from the original project.
