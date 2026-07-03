@@ -1,5 +1,26 @@
 // Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
+exports[`inline-style-parser parses declaration with comment-only value 1`] = `
+[
+  {
+    "position": Position {
+      "end": {
+        "column": 17,
+        "line": 1,
+      },
+      "source": undefined,
+      "start": {
+        "column": 1,
+        "line": 1,
+      },
+    },
+    "property": "color",
+    "type": "declaration",
+    "value": "",
+  },
+]
+`;
+
 exports[`inline-style-parser parses multiple declarations 1`] = `
 [
   {

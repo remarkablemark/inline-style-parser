@@ -141,16 +141,13 @@ export default function (style, options) {
   /**
    * Parse comments.
    *
-   * @param {Object[]} [rules]
+   * @param {Object[]} rules
    * @return {Object[]}
    */
   function comments(rules) {
     var c;
-    rules = rules || [];
     while ((c = comment())) {
-      if (c !== false) {
-        rules.push(c);
-      }
+      rules.push(c);
     }
     return rules;
   }
@@ -237,10 +234,8 @@ export default function (style, options) {
     // declarations
     var decl;
     while ((decl = declaration())) {
-      if (decl !== false) {
-        decls.push(decl);
-        comments(decls);
-      }
+      decls.push(decl);
+      comments(decls);
     }
 
     return decls;
