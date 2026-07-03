@@ -30,7 +30,11 @@ const cases = [
   'content: "Lorem ipsum";',
   'content: "foo: bar;";',
   'background-image: url(http://example.com/img.png)',
-  'background: #123456 url("https://foo.bar/image.png?v=2")',
+  'background: #123456 url("https://example.com/img.png?v=2&a=b")',
+  'background-image: url("http://example.com/img.png")',
+  "background-image: url('http://example.com/img.png')",
+  'background: url(http://example.com/img.png) no-repeat',
+  'background: url("data:image/svg+xml,<svg/>")',
 
   // vendor prefixes
   'background: -webkit-linear-gradient(90deg, black, #111)',
@@ -59,6 +63,16 @@ const snapshots = [
   ],
 
   ['parses single declaration', 'background-color: #C0FFEE;'],
+
+  // https://github.com/remarkablemark/inline-style-parser/issues/550
+  [
+    'parses semicolon and parenthesis inside double quoted url',
+    'background: url("a)b;c") no-repeat;'
+  ],
+  [
+    'parses semicolon and parenthesis inside single quoted url',
+    "background: url('a)b;c') no-repeat;"
+  ],
 
   [
     'parses multiple declarations',

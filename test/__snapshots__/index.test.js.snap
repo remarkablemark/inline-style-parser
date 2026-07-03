@@ -84,6 +84,48 @@ exports[`inline-style-parser parses multiple declarations 1`] = `
 ]
 `;
 
+exports[`inline-style-parser parses semicolon and parenthesis inside double quoted url 1`] = `
+[
+  {
+    "position": Position {
+      "end": {
+        "column": 35,
+        "line": 1,
+      },
+      "source": undefined,
+      "start": {
+        "column": 1,
+        "line": 1,
+      },
+    },
+    "property": "background",
+    "type": "declaration",
+    "value": "url("a)b;c") no-repeat",
+  },
+]
+`;
+
+exports[`inline-style-parser parses semicolon and parenthesis inside single quoted url 1`] = `
+[
+  {
+    "position": Position {
+      "end": {
+        "column": 35,
+        "line": 1,
+      },
+      "source": undefined,
+      "start": {
+        "column": 1,
+        "line": 1,
+      },
+    },
+    "property": "background",
+    "type": "declaration",
+    "value": "url('a)b;c') no-repeat",
+  },
+]
+`;
+
 exports[`inline-style-parser parses single declaration 1`] = `
 [
   {

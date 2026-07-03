@@ -8,7 +8,7 @@ var WHITESPACE_REGEX = /^\s*/;
 // declaration
 var PROPERTY_REGEX = /^(\*?[-#/*\\\w]+(\[[0-9a-z_-]+\])?)\s*/;
 var COLON_REGEX = /^:\s*/;
-var VALUE_REGEX = /^((?:'(?:\\'|.)*?'|"(?:\\"|.)*?"|\([^)]*?\)|[^};])+)/;
+var VALUE_REGEX = /^((?:'(?:\\'|.)*?'|"(?:\\"|.)*?"|[^};])+)/;
 var SEMICOLON_REGEX = /^[;\s]*/;
 
 // https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String/Trim#Polyfill
