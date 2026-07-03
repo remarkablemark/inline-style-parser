@@ -81,7 +81,9 @@ const snapshots = [
       content  :  " "  ; /* comment */
       foo:bar;-o-transition:all .5s
     `
-  ]
+  ],
+
+  ['parses declaration with comment-only value', 'color: /* red */;']
 ];
 
 const errors = [
