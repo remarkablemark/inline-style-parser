@@ -60,6 +60,16 @@ const snapshots = [
 
   ['parses single declaration', 'background-color: #C0FFEE;'],
 
+  // https://github.com/remarkablemark/inline-style-parser/issues/550
+  [
+    'parses semicolon and parenthesis inside double quoted url',
+    'background: url("a)b;c") no-repeat;'
+  ],
+  [
+    'parses semicolon and parenthesis inside single quoted url',
+    "background: url('a)b;c') no-repeat;"
+  ],
+
   [
     'parses multiple declarations',
     `
