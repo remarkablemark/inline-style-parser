@@ -30,7 +30,11 @@ const cases = [
   'content: "Lorem ipsum";',
   'content: "foo: bar;";',
   'background-image: url(http://example.com/img.png)',
-  'background: #123456 url("https://foo.bar/image.png?v=2")',
+  'background: #123456 url("https://example.com/img.png?v=2&a=b")',
+  'background-image: url("http://example.com/img.png")',
+  "background-image: url('http://example.com/img.png')",
+  'background: url(http://example.com/img.png) no-repeat',
+  'background: url("data:image/svg+xml,<svg/>")',
 
   // vendor prefixes
   'background: -webkit-linear-gradient(90deg, black, #111)',
