@@ -35,6 +35,7 @@ const cases = [
   "background-image: url('http://example.com/img.png')",
   'background: url(http://example.com/img.png) no-repeat',
   'background: url("data:image/svg+xml,<svg/>")',
+  'background: url(data:image/png; base64,abc+/=)',
 
   // vendor prefixes
   'background: -webkit-linear-gradient(90deg, black, #111)',
