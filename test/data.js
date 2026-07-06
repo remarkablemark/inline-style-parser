@@ -84,7 +84,15 @@ const snapshots = [
     `
   ],
 
-  ['parses declaration with comment-only value', 'color: /* red */;']
+  ['parses declaration with comment-only value', 'color: /* red */;'],
+  [
+    'parses adversarial comment input without backtracking',
+    'color: /**)))**)))**/red;'
+  ],
+  [
+    'parses adversarial comment input with mixed star-slash repetitions without backtracking',
+    'color: /**)*)/**)**)*/red;'
+  ]
 ];
 
 const errors = [

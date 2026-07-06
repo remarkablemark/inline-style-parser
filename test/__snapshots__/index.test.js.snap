@@ -1,5 +1,47 @@
 // Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
+exports[`inline-style-parser parses adversarial comment input with mixed star-slash repetitions without backtracking 1`] = `
+[
+  {
+    "position": Position {
+      "end": {
+        "column": 26,
+        "line": 1,
+      },
+      "source": undefined,
+      "start": {
+        "column": 1,
+        "line": 1,
+      },
+    },
+    "property": "color",
+    "type": "declaration",
+    "value": "red",
+  },
+]
+`;
+
+exports[`inline-style-parser parses adversarial comment input without backtracking 1`] = `
+[
+  {
+    "position": Position {
+      "end": {
+        "column": 25,
+        "line": 1,
+      },
+      "source": undefined,
+      "start": {
+        "column": 1,
+        "line": 1,
+      },
+    },
+    "property": "color",
+    "type": "declaration",
+    "value": "red",
+  },
+]
+`;
+
 exports[`inline-style-parser parses declaration with comment-only value 1`] = `
 [
   {
