@@ -12,9 +12,6 @@ var VALUE_REGEX =
   /^((?:'(?:\\.|[^'\\])*'|"(?:\\.|[^"\\])*"|url\((?:'(?:\\.|[^'\\])*'|"(?:\\.|[^"\\])*"|[^)]*)\)|[^};])+)/;
 var SEMICOLON_REGEX = /^[;\s]*/;
 
-// https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String/Trim#Polyfill
-var TRIM_REGEX = /^\s+|\s+$/g;
-
 // strings
 var NEWLINE = '\n';
 var FORWARD_SLASH = '/';
@@ -210,9 +207,9 @@ export default function (style, options) {
 
     var ret = pos({
       type: TYPE_DECLARATION,
-      property: trim(prop[0].replace(COMMENT_REGEX, EMPTY_STRING)),
+      property: prop[0].replace(COMMENT_REGEX, EMPTY_STRING).trim(),
       value: val
-        ? trim(val[0].replace(COMMENT_REGEX, EMPTY_STRING))
+        ? val[0].replace(COMMENT_REGEX, EMPTY_STRING).trim()
         : EMPTY_STRING
     });
 
@@ -244,14 +241,4 @@ export default function (style, options) {
 
   whitespace();
   return declarations();
-}
-
-/**
- * Trim `str`.
- *
- * @param {String} str
- * @return {String}
- */
-function trim(str) {
-  return str ? str.replace(TRIM_REGEX, EMPTY_STRING) : EMPTY_STRING;
 }
