@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.2.9](https://github.com/remarkablemark/inline-style-parser/compare/v0.2.8...v0.2.9) (2026-07-06)
+
+
+### Bug Fixes
+
+* parse unquoted `url()` values containing semicolons ([a7b60ad](https://github.com/remarkablemark/inline-style-parser/commit/a7b60adc0f67d09c23c70e8d7e5d5bb6961fd435))
+* prevent ReDoS in `COMMENT_REGEX` with unambiguous alternation ([eb7d005](https://github.com/remarkablemark/inline-style-parser/commit/eb7d005ec951b47f20e3a6b4df99007be50741fa))
+* replace `COMMENT_REGEX` to prevent ReDoS vulnerability ([a3cf4a5](https://github.com/remarkablemark/inline-style-parser/commit/a3cf4a5bf7f51f9ceb8283b0181baa3b7cf4a813))
+
 ## [0.2.8](https://github.com/remarkablemark/inline-style-parser/compare/v0.2.7...v0.2.8) (2026-07-03)
 
 
