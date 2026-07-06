@@ -1,6 +1,6 @@
 // http://www.w3.org/TR/CSS21/grammar.html
 // https://github.com/visionmedia/css-parse/pull/49#issuecomment-30088027
-var COMMENT_REGEX = /\/\*[^*]*\*+([^/*][^*]*\*+)*\//g;
+var COMMENT_REGEX = /\/\*[\s\S]*?\*\//g;
 
 var NEWLINE_REGEX = /\n/g;
 var WHITESPACE_REGEX = /^\s*/;
