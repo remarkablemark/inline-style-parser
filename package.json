@@ -51,7 +51,7 @@
     "@eslint/js": "10.0.1",
     "@rollup/plugin-commonjs": "29.0.3",
     "@rollup/plugin-node-resolve": "16.0.3",
-    "@rollup/plugin-terser": "1.0.0",
+    "@rollup/plugin-terser": "1.0.2",
     "css": "3.0.0",
     "eslint": "10.13.0",
     "eslint-plugin-prettier": "5.5.7",
